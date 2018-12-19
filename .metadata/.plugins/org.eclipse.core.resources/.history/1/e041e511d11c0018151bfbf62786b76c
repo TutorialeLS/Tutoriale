@@ -1,0 +1,17 @@
+package app;
+
+public class Pizza {
+	public enum type{
+		MARGHERITA("sos pomidorowy + szynka"), CAPRICIOSA("Sos pomidorowy+ser+pieczark"), PROSCIUTTO("sos pomidorowy+ser+szynka");
+	
+	private String description;
+	type(String desc){
+		description=desc;
+	}
+	public String getDescription() {
+		return description;
+	}
+
+	
+	}
+}

@@ -1,0 +1,25 @@
+package a_Zadania.b_Dzien_2.a_Napisy;
+
+public class Main6 {
+
+    public static void main(String[] args) {
+    	firstHalf("123456");
+
+    }
+
+    static String firstHalf(String str){
+    	
+       		String result="";
+       		String[] parts = str.split("");
+       		double half=(parts.length-1)/2;
+       		System.out.println(half);
+       		for(int i=0;i<parts.length;i++) {
+       			result=result+parts[i];
+       		}
+       		
+
+       	    
+   
+        return "";
+    }
+}

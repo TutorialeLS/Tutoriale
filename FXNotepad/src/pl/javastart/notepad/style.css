@@ -1,0 +1,22 @@
+
+@charset "UTF-8";
+.text-area,
+.text-area:focused,
+.text-area:focused .scroll-pane,
+.text-area:focused .scroll-pane .viewport .content {
+    -fx-background-color: #dddddd;
+    -fx-font-family: 'Comic Sans MS';
+    -fx-font-size: 13;
+    -fx-font-style: italic;
+}
+ 
+.button {
+    -fx-background-color: transparent;
+    -fx-background-image: url('button.png');
+    -fx-background-size: 100%;
+    -fx-background-position: center;
+}
+ 
+.button:hover {
+    -fx-opacity: 0.3;
+}

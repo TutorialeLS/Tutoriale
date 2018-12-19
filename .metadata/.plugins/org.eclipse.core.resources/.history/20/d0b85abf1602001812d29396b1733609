@@ -1,0 +1,14 @@
+package a_Zadania.b_Dzien_2.a_Napisy;
+
+public class Main2 {
+
+    public static void main(String[] args) {
+
+    String str = "123wrgfz";    
+    StringBuffer sb = new StringBuffer();
+    sb.append(str);
+    System.out.println(sb);
+    sb.reverse();
+    System.out.println(sb);
+}
+}

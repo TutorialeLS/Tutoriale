@@ -1,0 +1,23 @@
+package a_Zadania.b_Dzien_2.a_Napisy;
+
+public class Main2 {
+
+    public static void main(String[] args) {
+
+    String str = "Coderslab";
+  
+    StringBuffer sb = new StringBuffer();
+    sb.append(str);
+    
+    System.out.println(sb.toString());
+    StringBuffer sb1=sb.reverse();
+    
+    System.out.println(sb.toString());
+    if(sb1.equals(sb)) {
+    	System.out.println("to jest palindrom");
+    }
+    else
+    	System.out.println("to nie palindrom");
+    
+}
+}

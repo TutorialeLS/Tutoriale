@@ -1,0 +1,91 @@
+package data;
+
+import java.io.Serializable;
+import java.util.Comparator;
+
+public class Library implements Serializable {
+
+	private static final long serialVersionUID = -5996610431205036516L;
+	public static final int MAX_PUBLICATIONS = 2000;
+	private Publication[] publications;
+	private int publicationsNumber;
+
+	public Publication[] getPublications() {
+		return publications;
+	}
+
+	public void setPublications(Publication[] publications) {
+		this.publications = publications;
+	}
+
+	public int getPublicationsNumber() {
+		return publicationsNumber;
+	}
+
+	public void setPublicationsNumber(int publicationsNumber) {
+		this.publicationsNumber = publicationsNumber;
+	}
+
+	public Library() {// pusty konstruktor z ustawieniem rozmiarów obiektow
+		publications = new Publication[MAX_PUBLICATIONS];
+	}
+
+	private void addPublication(Publication pub) throws ArrayIndexOutOfBoundsException {
+		if (publicationsNumber == MAX_PUBLICATIONS) {
+			throw new ArrayIndexOutOfBoundsException("MAX_PUBLICATIONS "+MAX_PUBLICATIONS);
+		}
+			publications[publicationsNumber] = pub;
+			publicationsNumber++;//trzymanie w programie?
+
+	}
+
+	public void addBook(Book book) {
+		addPublication(book);
+	}
+
+	public void addMagazine(Magazine magazine) {
+		addPublication(magazine);
+	}
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		for(int i=0;i<publicationsNumber;i++) {
+			builder.append(publications[i]);
+			builder.append("\n");			
+		}
+		return builder.toString();
+		
+	}
+    public static class AlphabeticalComparator implements Comparator<Publication> {
+        @Override
+        public int compare(Publication o1, Publication o2) {
+            if (o1 == null && o2 == null) {
+                return 0;
+            }
+            if (o1 == null) {
+                return 1;
+            }
+            if (o2 == null) {
+                return -1;
+            }
+            return o1.getTitle().compareTo(o2.getTitle());
+        }
+    }
+     
+    public static class DateComparator implements Comparator<Publication> {
+        @Override
+        public int compare(Publication o1, Publication o2) {
+            if (o1 == null && o2 == null) {
+                return 0;
+            }
+            if (o1 == null) {
+                return 1;
+            }
+            if (o2 == null) {
+                return -1;
+            }
+            Integer i1 = o1.getYear();
+            Integer i2 = o2.getYear();
+            return -i1.compareTo(i2);
+        }
+    }
+}

@@ -1,0 +1,24 @@
+package app;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		List<String> nameList= new ArrayList<>();
+		nameList.add("Lucjan");
+		nameList.add("Misia");
+		nameList.add("Adam");
+		nameList.add("Zosia");
+		nameList.add("Katarzyna");
+		namelist.getClass();
+		
+		Collection.shuffle(nameList);
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,31 @@
+package a_Zadania.b_Dzien_2.a_Napisy;
+
+import com.sun.xml.internal.ws.util.StringUtils;
+
+public class Main4 {
+
+    public static void main(String[] args) {
+    	  String str = "codersLabxyz";
+    	  System.out.println(toggleChar(str));
+    }
+
+    static String toggleChar(String str) {
+    		String result="";
+    		String[] parts = str.split("");
+    		for(int i=0;i<parts.length;i++) {
+    			char c = parts[i].charAt(0);
+    			if(Character.isUpperCase(c)) {
+    				parts[i].toLowerCase();
+    				System.out.println(parts[i]);
+    			}
+    			else if(Character.isLowerCase(c)) {
+    				parts[i].toUpperCase();    				
+    			}
+    			result=result+parts[i];
+    		}
+    		
+
+    	    
+        return result;
+    }
+}

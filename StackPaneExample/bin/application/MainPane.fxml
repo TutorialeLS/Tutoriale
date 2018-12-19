@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="mainStack" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPaneController">
+	<children>
+		<fx:include fx:id="firstPane" source="FirstPane.fxml" />
+	</children>
+	<children>
+		<VBox fx:id="second">
+			<children>
+				<TextArea text="Drugi ekran" />
+				<Button fx:id="back" maxWidth="1.7976931348623157E308"
+					mnemonicParsing="false" text="Wstecz" />
+			</children>
+		</VBox>
+	</children>
+</StackPane>

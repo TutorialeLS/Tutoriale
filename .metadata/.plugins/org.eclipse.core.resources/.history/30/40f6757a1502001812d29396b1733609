@@ -1,0 +1,22 @@
+package a_Zadania.b_Dzien_2.a_Napisy;
+
+public class Main2 {
+
+    public static void main(String[] args) {
+
+    String str = "kajak";
+    str=str.trim();
+    StringBuffer sb = new StringBuffer();
+    sb.append(str);
+    
+    System.out.println(sb.toString());
+    sb.reverse();
+    System.out.println(sb.toString());
+    if(str.equals(sb)) {
+    	System.out.println("to jest palindrom");
+    }
+    else
+    	System.out.println("to nie palindrom");
+    
+}
+}

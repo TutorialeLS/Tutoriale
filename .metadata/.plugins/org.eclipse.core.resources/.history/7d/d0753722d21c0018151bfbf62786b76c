@@ -1,0 +1,14 @@
+package app;
+
+import app.Pizza.type;
+
+public class Pizzeria {
+
+	public static void main(String[] args) {
+		Pizza pizz1=new Pizza();
+		pizz1.setType(type.MARGHERITA);
+		
+
+	}
+
+}

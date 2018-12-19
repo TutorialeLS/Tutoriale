@@ -1,0 +1,24 @@
+package b_Zadania_Domowe.a_Dzien_2;
+
+
+public class Main4 {
+
+    public static void main(String[] args) {
+    	String str="ajkwgdhbnnnaowudjpawpzlkxmccccalwduapwo[[[";
+    System.out.println(tripple(str));
+
+    }
+    static int tripple(String str) {
+		String[] strArray=str.split("");
+		int counter=0;
+		for(int i=0;i<strArray.length-2;i++) {
+			if(strArray[i].equals(strArray[i+1])) {
+				if(strArray[i+1].equals(strArray[i+2])) {
+					counter++;
+				}
+			}
+		}
+    	return counter;
+    	
+    }
+}

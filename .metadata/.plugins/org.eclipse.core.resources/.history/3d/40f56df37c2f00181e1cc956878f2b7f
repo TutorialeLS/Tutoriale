@@ -1,0 +1,26 @@
+package app;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		List<String> nameList= new Array<>();
+		nameList.add("Lucjan");
+		nameList.add("Misia");
+		nameList.add("Adam");
+		nameList.add("Zosia");
+		nameList.add("Katarzyna");
+		System.out.println(nameList.getClass());
+		List<String> words = Arrays.asList("123","456");
+		System.out.println(words.getClass());
+		//Collection.shuffle(nameList);
+		
+		
+		
+	}
+
+}

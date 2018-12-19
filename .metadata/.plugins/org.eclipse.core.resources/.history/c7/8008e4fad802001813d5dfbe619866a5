@@ -1,0 +1,27 @@
+package b_Zadania_Domowe.a_Dzien_2;
+
+
+public class Main3 {
+
+    public static void main(String[] args) {
+    	String str = "Z Coders Lab niezależnie od wykształcenia możesz zmienić swoją karierę." +
+                " Jesteśmy szkołą oferującą bardzo intensywne kursy programowania." +
+                " Przygotujemy Cię do pracy na stanowisku junior web developera i pomożemy znaleźć zatrudnienie po kursie.";	
+System.out.println(upperCase(str));
+   
+    }
+
+    static String upperCase(String str, int index) {
+        String[] strArray=str.split("");
+        String result="";
+        
+        for(int i=0;i<strArray.length;i++) {
+        	if(i%index==0) {
+        		strArray[i]=strArray[i].toUpperCase();
+        	}
+        	result=result+strArray[i];
+        }
+		return result;
+    	
+    }
+}

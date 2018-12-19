@@ -1,0 +1,32 @@
+package app;
+
+public enum Type {
+	MARGHERITA("sos pomidorowy + szynka"), CAPRICIOSA("Sos pomidorowy+ser+pieczark"), PROSCIUTTO(
+			"sos pomidorowy+ser+szynka");
+
+	private String description;
+
+	Type(String desc) {
+		description = desc;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Wybrana pizza to: " + getDescription();
+	}
+	public void allPizzas() {
+		for(Type s:Type.values()) {
+			System.out.println(s.getDescription());
+		}
+	}
+}

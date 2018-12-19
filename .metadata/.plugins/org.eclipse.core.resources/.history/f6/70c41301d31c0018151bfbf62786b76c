@@ -1,0 +1,16 @@
+package app;
+
+
+
+public class Pizzeria {
+
+	public static void main(String[] args) {
+		Pizza pizz1=new Pizza();
+		allPizzas();
+		System.out.println("Wyswietl wszystkie pizze");		
+		pizz1.setType(Type.MARGHERITA);
+		System.out.println(pizz1.getType());		
+
+	}
+
+}

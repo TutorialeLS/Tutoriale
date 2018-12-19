@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+ 
+<VBox stylesheets="@style.css" xmlns="http://javafx.com/javafx/8"
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.javastart.fxe.controller.ContentPaneController">
+    <children>
+        <fx:include fx:id="textPane" source="TextPane.fxml" />
+        <Button fx:id="clearButton" maxWidth="1.7976931348623157E308"
+            mnemonicParsing="false" text="Clear windows" VBox.vgrow="NEVER" />
+    </children>
+</VBox>

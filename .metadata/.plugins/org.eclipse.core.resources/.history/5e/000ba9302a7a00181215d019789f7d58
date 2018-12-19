@@ -1,0 +1,36 @@
+package app;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String fileName = "baza 2018-06-26.txt";
+		FileReader fileReader = null;
+		BufferedReader reader = null;
+		try {
+			fileReader = new FileReader(fileName);
+			reader = new BufferedReader(fileReader);
+			int nextLine = -1;
+			int lines = 0;
+			while ((nextLine = reader.read()) == -1) {
+				System.out.println(nextLine);
+				lines++;
+			}
+			System.out.println("Ilość wierszy w pliku: " + lines);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (reader != null)
+					System.out.println("koniec pliku");
+					reader.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

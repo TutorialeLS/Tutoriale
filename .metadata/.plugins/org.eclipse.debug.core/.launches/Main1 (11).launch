@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/WAR_JAVA_W_01_JEE_Podstawy-master/a_Zadania/d_Dzien_4/a_Wprowadzanie_danych/Main1.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="a_Zadania.d_Dzien_4.a_Wprowadzanie_danych.Main1"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="WAR_JAVA_W_01_JEE_Podstawy-master"/>
+</launchConfiguration>

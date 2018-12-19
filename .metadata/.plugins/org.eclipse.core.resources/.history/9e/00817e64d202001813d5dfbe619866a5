@@ -1,0 +1,80 @@
+package b_Zadania_Domowe.a_Dzien_2;
+
+import java.util.Arrays;
+
+public class Main1 {
+
+    public static void main(String[] args) {
+        String str = "Z Coders Lab niezależnie od wykształcenia możesz zmienić swoją karierę." +
+                " Jesteśmy szkołą oferującą bardzo intensywne kursy programowania." +
+                " Przygotujemy Cię do pracy na stanowisku junior web developera i pomożemy znaleźć zatrudnienie po kursie.";
+        System.out.println(encode(str));
+    
+    
+    }
+    static String encode(String str) {
+    	String[] strArray=str.split("");
+    	//System.out.print(Arrays.toString(strArray));
+    	char[] charArray=new char[strArray.length];
+    	int[] asciiArray=new int[strArray.length];
+    	
+    	String result="";
+    	
+    	System.out.println(strArray.length);
+   	for(int i=0;i<strArray.length-1;i++) {
+   		charArray [i] = strArray[i].charAt(0);
+   		asciiArray[i]=charArray[i];
+   		if(asciiArray[i]>=48&&asciiArray[i]<=57) {
+   			if(asciiArray[i]==55) {
+   				asciiArray[i]=48;
+   			}
+   			else if(asciiArray[i]==56) {
+   				asciiArray[i]=49;
+   			}
+   			else if(asciiArray[i]==57) {
+   				asciiArray[i]=50;
+   			}
+   			else {
+   				asciiArray[i]=asciiArray[i]+3;
+   			}
+   		}
+  		if(asciiArray[i]>=65&&asciiArray[i]<=90) {
+   			if(asciiArray[i]==88) {
+   				asciiArray[i]=65;
+   			}
+   			else if(asciiArray[i]==89) {
+   				asciiArray[i]=66;
+   			}
+   			else if(asciiArray[i]==90) {
+   				asciiArray[i]=67;
+   			}
+   			else {
+   				asciiArray[i]=asciiArray[i]+3;
+   			}
+   		}
+  		if(asciiArray[i]>=97&&asciiArray[i]<=122) {
+   			if(asciiArray[i]==120) {
+   				asciiArray[i]=97;
+   			}
+   			else if(asciiArray[i]==121) {
+   				asciiArray[i]=98;
+   			}
+   			else if(asciiArray[i]==122) {
+   				asciiArray[i]=99;
+   			}
+   			else {
+   				asciiArray[i]=asciiArray[i]+3;
+   			}
+   		}
+
+    		System.out.print(asciiArray[i]);
+   	}
+   	
+   	for(int i=0;i<strArray.length;i++) {
+   	result=result+String.valueOf(asciiArray[i]);
+   	}
+		return str;
+    	
+    }
+}
+

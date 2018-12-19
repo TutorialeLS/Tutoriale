@@ -1,0 +1,37 @@
+package data;
+
+//Patient - klasa przechowująca dane o pacjencie (imię, nazwisko, PESEL) - klasa powinna być zgodna z konwencją JavaBeans
+public class Patient {
+	private String name;
+	private String nazwisko;
+	private int PESEL;
+	Patient(String name, String nazwisko, int PESEL){
+		this.setName(name);
+		this.setNazwisko(nazwisko);
+		this.setPESEL(PESEL);
+	}
+	public Patient() {
+		// TODO Auto-generated constructor stub
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getNazwisko() {
+		return nazwisko;
+	}
+	public void setNazwisko(String nazwisko) {
+		this.nazwisko = nazwisko;
+	}
+	public int getPESEL() {
+		return PESEL;
+	}
+	public void setPESEL(int pESEL) {
+		PESEL = pESEL;
+	}
+	public String toString() {
+		return name+" "+nazwisko+" "+PESEL;
+	}
+}

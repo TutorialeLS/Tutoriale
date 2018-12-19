@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+ 
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="pl.javastart.fx.controller.MainController">
+    <children>
+        <fx:include fx:id="contentPane" source="ContentPane.fxml" />
+        <fx:include fx:id="controlPane" source="ControlPane.fxml" />
+    </children>
+</VBox>

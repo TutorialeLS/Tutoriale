@@ -1,0 +1,22 @@
+package a_Zadania.b_Dzien_2.a_Napisy;
+
+public class Main1 {
+
+    public static void main(String[] args) {
+
+    String str = "CodersLab jak dobrze zacząć programować";
+    char c = str.charAt(str.length()-2);
+    System.out.println(c);
+    int sum=0;
+    StringBuffer newStr = new StringBuffer();
+    for(int i=0;i<str.length()-2;i++) {
+    	
+    	String cString=""+str.charAt(i);
+    	if(cString.equals("a")) {
+    		sum=sum+1;
+    	}
+    		
+    }
+    System.out.println(sum);
+    }
+}

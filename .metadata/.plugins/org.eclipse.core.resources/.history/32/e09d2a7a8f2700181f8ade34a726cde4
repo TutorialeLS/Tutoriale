@@ -1,0 +1,18 @@
+package testowy;
+
+public class test {
+		public static void main(String args[]) {
+
+
+			int i=0;
+			boolean test= false;
+			while(test!=true) {
+				System.out.println(i);
+				test=false;
+				i++;
+				if(i==10) {
+					test=true;
+				}
+			}
+		}
+}

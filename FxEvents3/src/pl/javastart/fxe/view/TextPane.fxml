@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+ 
+<HBox VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8"
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.javastart.fxe.controller.TextPaneController">
+    <children>
+        <TextArea id="text-area-1" fx:id="inputTextArea" maxHeight="1.7976931348623157E308"
+            maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0"
+            HBox.hgrow="ALWAYS" />
+        <TextArea id="text-area-2" fx:id="outputTextArea" maxHeight="1.7976931348623157E308"
+            maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0"
+            HBox.hgrow="ALWAYS" />
+    </children>
+</HBox>

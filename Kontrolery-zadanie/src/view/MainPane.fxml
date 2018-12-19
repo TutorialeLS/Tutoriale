@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox fx:id="loginVBoxPane" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <Label fx:id="labelOneText" maxWidth="1.7976931348623157E308"  />
+      <Button fx:id="buttonOne" maxWidth="1.7976931348623157E308" mnemonicParsing="false"  />
+      <Label fx:id="labelTwoText" maxWidth="1.7976931348623157E308" />
+      <Button fx:id="buttonTwo" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="5.0" prefWidth="0.0"  />
+   </children>
+</VBox>

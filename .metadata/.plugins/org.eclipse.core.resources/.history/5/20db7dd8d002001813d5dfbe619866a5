@@ -1,0 +1,35 @@
+package b_Zadania_Domowe.a_Dzien_2;
+
+import java.util.Arrays;
+
+public class Main1 {
+
+    public static void main(String[] args) {
+        String str = "Z Coders Lab niezależnie od wykształcenia możesz zmienić swoją karierę." +
+                " Jesteśmy szkołą oferującą bardzo intensywne kursy programowania." +
+                " Przygotujemy Cię do pracy na stanowisku junior web developera i pomożemy znaleźć zatrudnienie po kursie.";
+        System.out.println(encode(str));
+    
+    
+    }
+    static String encode(String str) {
+    	String[] strArray=str.split("");
+    	//System.out.print(Arrays.toString(strArray));
+    	char[] charArray=new char[strArray.length];
+    	int[] asciiArray=new int[strArray.length];
+    	System.out.println(strArray.length);
+   	for(int i=0;i<strArray.length-1;i++) {
+   		charArray [i] = strArray.charAt(i);
+   		asciiArray[i]=charArray[i];
+    		System.out.println(charArray[i]);
+   	}    	
+//    	
+    //	48-57    	
+    //	65-90
+    //	97-122
+    	
+		return str;
+    	
+    }
+}
+

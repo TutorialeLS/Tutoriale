@@ -1,0 +1,21 @@
+package a_Zadania.b_Dzien_2.a_Napisy;
+
+public class Main2 {
+
+    public static void main(String[] args) {
+
+    String str = "123wrgfz";    
+    StringBuffer sb = new StringBuffer();
+    StringBuffer sb1=sb.append(str);
+    System.out.println(sb);
+    StringBuffer sb2=sb.reverse();
+    System.out.println(sb);
+    
+    String str1 = sb1.toString();
+    String str2 = sb2.toString();
+    if(str1.equals(str2)) {
+    	
+    }
+    
+}
+}

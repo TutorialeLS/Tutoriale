@@ -1,0 +1,17 @@
+package b_Zadania_Domowe.a_Dzien_2;
+
+
+public class Main4 {
+
+    public static void main(String[] args) {
+    	String str="ajkwgdhbnnnaowudjpawpzlkxmccccalwduapwo[[[";
+    System.out.println(tripple(str));
+
+    }
+    static int tripple(String str) {
+		String[] strArray=str.split("");
+		
+    	return 0;
+    	
+    }
+}

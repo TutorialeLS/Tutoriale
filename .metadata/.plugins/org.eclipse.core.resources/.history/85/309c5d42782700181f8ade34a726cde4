@@ -1,0 +1,22 @@
+package testowy;
+
+public class test {
+	int a;
+	test(){
+		
+	}
+		public static void main(String args[]) {
+			test test1=new test();
+			a=5;
+			int i=0;
+			boolean test= false;
+			while(test!=true) {
+				System.out.println(i);
+				test=false;
+				i++;
+				if(i==10) {
+					test=true;
+				}
+			}
+		}
+}

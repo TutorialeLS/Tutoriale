@@ -1,0 +1,6 @@
+1519668158387	Rename field 'maxBooks'
+1519668362300	Rename field 'exit'
+1519668368820	Rename field 'addBook'
+1519668381166	Rename field 'printBooks'
+1519670725020	Encapsulate field 'magazines'
+1519670731152	Encapsulate field 'magazinesNumber'

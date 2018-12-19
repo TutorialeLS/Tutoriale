@@ -1,0 +1,18 @@
+package a_Zadania.b_Dzien_2.a_Napisy;
+
+public class Main4 {
+
+    public static void main(String[] args) {
+    	  String str = "codersLabxyz";
+    	  toggleChar(str);
+    }
+
+    static String toggleChar(String str) {
+    	
+    	  
+    	    StringBuffer sb = new StringBuffer();
+    	    sb.append(str);
+    	    System.out.println(sb.reverse());
+        return "";
+    }
+}

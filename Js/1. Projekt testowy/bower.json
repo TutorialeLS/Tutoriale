@@ -1,0 +1,22 @@
+{
+  "name": "angularApp",
+  "authors": [
+    "Lucjan Sakowicz <lucjan.sakowicz@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.7.5"
+  }
+}

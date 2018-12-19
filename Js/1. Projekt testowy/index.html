@@ -1,0 +1,67 @@
+<!-- nazwa aplikacji, ng-app to odpowiednik adnotacji w Javie, mowi o tym ze dany wezel jest zarzadzany przez AngularJS -->
+<html ng-app="app">
+    <head>
+        <title>Angular Controllers</title>
+          <style>
+            h1 {
+                width: 300px;
+                border-style: dotted;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!-- adnotacja kontrolelra i nazwa kontrolera -->
+        <!-- "as" dziala jak alias w SQL, dodatkowo umozlwia okreslenie z ktorego kontrolera pochodzi zmienna -> w tym wypadku z kontrolera HelloController -->
+        <div ng-controller="HelloController as hello">
+            <h1>To proste jak {{ 2+2 }}</h1>
+            <!-- przy uzyciu "ng-model" mozemy powiazac z kontrollerem: input, textarea, select element do ktorego bedzie pobierana wartosc z tego pola  -->
+            <!-- autouzupełnianie-->
+            <!-- <input type="text" ng-model="hello.exampleVariable"> -->
+            <!-- przykladowa zmienna, ktora bedzie podstawiona przez kontroller -->
+            <!-- czysty tekst-->
+            <p>{{hello.exampleVariable}}</p>
+        </div>
+        
+       <!-- kontroler kliknięć test --> 
+        <div ng-controller="ClickController as clickControl">
+            <input type="text" ng-model="clickControl.textInput">
+            <!-- ng-click -> obsluga pojedynczego klikniecia myszy -->
+            <button ng-click="clickControl.changeHeader()">Change Header</button>
+            <!-- obsluga podwojnego klikniecia-->
+            <h1 ng-dblclick="clickControl.headerClick()">{{clickControl.header}}</h1>
+        </div>
+        
+        <!-- kontroler myszki test -->
+        <div ng-controller="MouseController as mouseControl">
+            <h1 ng-mousedown="mouseControl.mouseDown()">Mouse Down</h1>
+            <h1 ng-mouseup="mouseControl.mouseUp()">Mouse Up</h1>
+            <h1 ng-mouseenter="mouseControl.mouseEnter()">Mouse Enter</h1>
+            <h1 ng-mouseleave="mouseControl.mouseLeave()">Mouse Leave</h1>
+            <h1 ng-mousemove="mouseControl.mouseMove()">Mouse Move</h1>
+            <h1 ng-mouseover="mouseControl.mouseOver()">Mouse Over</h1>
+        </div>
+        
+        <!-- kontroler klawiszy test-->
+        <div ng-controller="KeyController as keyControl">
+            <input type="text" ng-keydown="keyControl.keyDown()"
+                   ng-keyup="keyControl.keyUp()" 
+                   ng-keypress="keyControl.keyPress()"
+                   placeholder="input">
+            <h1>Key down: {{keyControl.down}}</h1>
+            <h1>Key up: {{keyControl.up}}</h1>
+            <h1>Key press: {{keyControl.press}}</h1>
+        </div>
+        <!-- kontroler zmiany zdarzenia -->     
+        <div ng-controller="ChangeController as change">
+            <!-- dyrektywa ng-change -> funkcja ktora zostanie wywolana po zmianie stanu -->
+            <input type="checkbox" ng-model="change.checkbox" ng-change="change.changeState()">
+            <h1>{{change.header}}</h1>
+        </div>
+        
+        <!-- sciezka do biblioteki -->
+        <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+        <!-- sciezka do kontrolera -->
+        <script src="js/app/app.js" type="application/javascript"></script>
+    </body>
+</html>

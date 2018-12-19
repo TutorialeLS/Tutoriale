@@ -1,0 +1,86 @@
+<!-- nazwa aplikacji, ng-app to odpowiednik adnotacji w Javie, mowi o tym ze dany wezel jest zarzadzany przez AngularJS -->
+<!-- dyrektywa ng-app jest zawsze stala, zmienia sie "app" w pliku directives.js-->
+<html ng-app="app">
+    <head>
+        <title>Angular Controllers</title>
+        <!-- style dla parzystych/nieparzystych linii -->
+       <style>
+           /* komentarz w CSS */
+            .parzyste {
+                color: red;
+            }
+            .nieparzyste {
+                color: blue;
+            }
+        </style>
+    </head>
+    
+<body>
+    <!-- ng-href zablokuje "klikalnosc" do momentu kiedy zaladuje sie strona -->
+<div ng-controller="HrefController as ctrl">
+    <a ng-href="https://www.youtube.com/watch?v={{ctrl.movies[0]}}">Java Rap</a>
+    <br />
+    <a ng-href="https://www.youtube.com/watch?v={{ctrl.movies[1]}}">Java is what Java does</a>
+    <br />
+    <!-- jak wyzej -->
+    <img ng-src="{{ctrl.imgSrc}}">
+</div>
+    
+    <!-- ng-show, ng-hide wymaga pustego kontrolera LUB użycie poprzedniego kontrolera, bez dodawania funkcji -->
+<div ng-controller="HrefController as ctrl">
+    <!-- jesli checkbox jest zaznaczony, ctrl.check -> zwróci true-->
+     <!-- jesli checkbox NIE jest zaznaczony, ctrl.check -> zwróci false-->
+    Checkbox ({{ctrl.check}}):<input type="checkbox" ng-model="ctrl.check">
+
+    <!-- wyswietla element, gdy wartosc wyrazenia ctrl.check wynosi true -->
+    <p ng-show="ctrl.check">Pokaż</p>
+      <!-- wyswietla element, gdy wartosc wyrazenia ctrl.check wynosi false -->
+    <!-- ukrywa, gdy wartosc wynosi true(ten sam efekt)-->
+    <p ng-hide="ctrl.check">Ukryj</p>
+</div>    
+    
+    <!-- petle -->
+    <div ng-controller="RepeatController as ctrl">
+    <h1>All names:</h1>
+    <ol>
+        <!-- dla kazdego p w zbiorze people (tak jak np for(String s:arrayString){} w javie) -->
+        <!-- ng-class-even okreslenie klasy do ktorej nalezy dany obiekt na sztywno-->
+         <!-- do przypisywania na sztywno w dyrektywach używa się zapisu "'STRING'" -->
+                  <li ng-repeat="p in ctrl.people"
+                    ng-class-even="'parzyste'"
+                    ng-class-odd="'nieparzyste'">{{p.firstName}} : {{p.lastName}}</li>
+    </ol>
+    
+    
+    <!-- lub na przyklad z wykorzystaniem tabeli-->
+    <table border="1">
+    <thead >
+        <tr>
+            <th>First name</th>
+            <th>Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- klasa jest okreslona w kontrolerze-->
+         <tr ng-repeat="p in ctrl.people" 
+                        ng-class-even="ctrl.even"
+                        ng-class-odd="ctrl.odd">
+            <td>{{p.firstName}}</td>
+            <td>{{p.lastName}}</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+<!-- dyrektywa styli -->
+    <div ng-controller="HrefController as ctrl">
+<h1 ng-style="ctrl.h1style">All names:</h1>
+<button id="button" ng-click="ctrl.changeH1Style()">Change H1 style</button>
+    </div>
+
+    
+        <!-- sciezka do biblioteki -->
+        <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+        <!-- sciezka do kontrolera -->
+        <script src="js/app/directives.js" type="application/javascript"></script>
+        </body>
+</html>

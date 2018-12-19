@@ -1,0 +1,32 @@
+<html ng-app="app">
+    <head>
+        <title>Angular Services</title>
+    </head>
+    
+    <body>
+       
+        <div ng-controller="BookController as ctrl">
+            <h1>{{ctrl.appName}}{{ctrl.version}}</h1>
+            <h1>Book Store</h1>
+            <input type="text" placeholder="Title" ng-model="ctrl.book.title"><br/>
+            <input type="text" placeholder="Author" ng-model="ctrl.book.author"><br/>
+            <input type="text" placeholder="ISBN" ng-model="ctrl.book.isbn"><br/>
+            <button ng-click="ctrl.addBook(ctrl.book)">Add Book</button>
+            
+            <h2>All Books:</h2>
+            <ul>
+                <li ng-repeat="b in ctrl.books">{{b.title}} - {{b.author}} ({{b.isbn}})</li>
+            </ul>
+        </div>
+<!-- koniecznie w takiej kolejnosci
+1. angular
+2. tworzony jest app przy uzyciu angular
+3. tworzone sa uslugi
+4. tworzony jest kontroler korzystajacy z uslug 
+W przypadku blednej kolejnosci angular nie bedzie mogl odnalezc zależności-->
+        <script src="js/lib/angular/angular.js" type="application/javascript"></script>
+        <script src="js/app/app.js" type="application/javascript"></script>
+        <script src="js/app/services.js" type="application/javascript"></script>
+        <script src="js/app/controllers.js" type="application/javascript"></script>
+    </body>
+</html>

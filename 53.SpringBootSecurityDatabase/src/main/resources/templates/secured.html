@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Secret page</title>
+</head>
+<body>
+	<h1>This is secured area</h1>
+	    <form action="logmeout" th:action="@{/logmeout}" method="post" >
+        <input type="submit" value="Log me out" />
+    </form>
+</body>
+</html>

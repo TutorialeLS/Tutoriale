@@ -1,0 +1,18 @@
+.home-jumbo{
+	background:url('../img/jumbo-back.png') center;
+}
+.dish-margherita{
+	background:url('../img/margherita.png') center;
+}
+.dish-capriciosa{
+	background:url('../img/capriciosa.png') center;
+}
+.dish-bolognese{
+	background:url('../img/bolognese.png') center;
+}
+.dish-pannacotta{
+	background:url('../img/pannacotta.png') center;
+}
+.media-body{
+	margin-left: 10px;
+}

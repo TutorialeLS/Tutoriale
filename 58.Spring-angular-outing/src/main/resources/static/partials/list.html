@@ -1,0 +1,7 @@
+<h1>List of all books</h1>
+<ul>
+	<li ng-repeat="b in listCtrl.books">
+	<!-- #! to odnosniki do adresow fragmentow, tak samo jak w zwyklych linkach -->
+		<a ng-href="#!details/{{b.id}}">{{b.title}} - {{b.author}} ({{b.isbn}})</a>
+	</li>
+</ul>
